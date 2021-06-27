@@ -1,6 +1,6 @@
 timer = {}
 
-timer_list = {}
+local timer_list = {}
 
 function timer.Create(name, time, func)
 	if name == nil or time == nil or func == nil then 
