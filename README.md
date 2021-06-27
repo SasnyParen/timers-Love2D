@@ -3,8 +3,7 @@ Library for the Love2d framework. / Библеотека для фреймфор
 
 Usage:
 
+
+```html
+    <require("timer")>
 ```
-
-&<require("timer")>
-
-
