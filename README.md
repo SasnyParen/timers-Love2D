@@ -4,6 +4,6 @@ Library for the Love2d framework. / Библеотека для фреймфор
 Usage:
 
 
-```html
+```lua
     require("timer")
 ```
