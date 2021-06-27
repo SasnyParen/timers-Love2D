@@ -20,7 +20,7 @@ Available functions
 ```lua
 timer.Create() -- Create timer
 timer.Destroy() -- Destroy timer
-timer.DestroyAll() Destroy all timers
+timer.DestroyAll() -- Destroy all timers
 timer.TimeLeft() -- Get time left timer
 timer.Exists() -- Check timer valid
 ```
