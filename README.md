@@ -5,6 +5,6 @@ Usage:
 
 ```
 
-<require("timer")>
+&<require("timer")>
 
 
