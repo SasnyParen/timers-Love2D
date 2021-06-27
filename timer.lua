@@ -29,7 +29,7 @@ function timer.TimeLeft(name)
 	if name == nil then 
 		return false
 	end
-	return timer_list[name].time - love.timer.getTime()
+	return math.floor(timer_list[name].time - love.timer.getTime())
 end
 
 function timer.Exists(name)
