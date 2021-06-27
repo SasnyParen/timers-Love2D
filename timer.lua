@@ -24,10 +24,10 @@ function timer.DestroyAll()
 end
 
 function timer.TimeLeft(name)
-	if name == nil then 
-		return false
+	if timer_data[name] then 
+		return math.floor(timer_data[name].time - love.timer.getTime())
 	end
-	return math.floor(timer_data[name].time - love.timer.getTime())
+	return 0
 end
 
 function timer.Exists(name)
@@ -42,8 +42,8 @@ function UpdateTimers()
 
 	for i, timer in pairs(timer_data) do 
 		if love.timer.getTime() >= timer.time then 
-			timer_list[timer.name] = nil 
-			timer_data[timer.name] = nil
+			timer_list[i] = nil
+			timer_data[i] = nil
 			timer.func()
 		end
 	end
