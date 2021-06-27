@@ -5,5 +5,5 @@ Usage:
 
 
 ```html
-    <require("timer")>
+    require("timer")
 ```
