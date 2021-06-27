@@ -18,11 +18,11 @@ end
 Available functions
 
 ```lua
-timer.Create()
-timer.Destroy()
-timer.DestroyAll()
-timer.TimeLeft()
-timer.Exists()
+timer.Create() -- Create timer
+timer.Destroy() -- Destroy timer
+timer.DestroyAll() Destroy all timers
+timer.TimeLeft() -- Get time left timer
+timer.Exists() -- Check timer valid
 ```
 
 Example:
