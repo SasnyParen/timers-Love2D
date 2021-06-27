@@ -3,9 +3,6 @@ timer = {}
 local timer_list = {}
 
 function timer.Create(name, time, func)
-	if name == nil or time == nil or func == nil then 
-		return false
-	end
 	timer_list[name] = { 
 		time = love.timer.getTime() + time,
 		func = func,
@@ -14,9 +11,6 @@ function timer.Create(name, time, func)
 end
 
 function timer.Destroy(name)
-	if name == nil then 
-		return false
-	end
 	timer_list[name] = nil
 	return true
 end
@@ -33,9 +27,6 @@ function timer.TimeLeft(name)
 end
 
 function timer.Exists(name)
-	if name == nil then 
-		return false
-	end
 	if timer_list[name] then 
 		return true
 	else 
