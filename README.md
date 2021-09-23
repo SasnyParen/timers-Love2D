@@ -19,6 +19,7 @@ Available functions
 
 ```lua
 timer.Create() -- Create timer
+timer.Simple() -- Create timer without any name
 timer.Destroy() -- Destroy timer
 timer.DestroyAll() -- Destroy all timers
 timer.TimeLeft() -- Get time left timer
