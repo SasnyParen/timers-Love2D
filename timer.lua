@@ -12,6 +12,14 @@ function timer.Create(name, time, func)
 	return true
 end
 
+function timer.Simple(time, func)
+	timer_data[#timer_data + 1] = { 
+		time = love.timer.getTime() + time,
+		func = func,
+	}
+	timer_list[#timer_data] = {}
+	return true
+end
 function timer.Destroy(name)
 	timer_list[name] = nil
 	timer_data[name] = nil
