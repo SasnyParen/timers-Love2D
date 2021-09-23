@@ -35,9 +35,7 @@ function love.load()
 end
 
 function love.draw()
-    if game.Pred then
         love.graphics.print("Timer Left: ".. timer.TimeLeft("Test"), 250, 60)
-    end
 end
 
 function love.update(dt)
