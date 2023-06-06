@@ -11,19 +11,25 @@ Usage:
 require("timer")
 
 function love.update()
-    UpdateTimers()
+    timer.Update()
 end
 ```
 
 Available functions
 
 ```lua
-timer.Create() -- Create timer
-timer.Simple() -- Create timer without any name
-timer.Destroy() -- Destroy timer
-timer.DestroyAll() -- Destroy all timers
-timer.TimeLeft() -- Get time left timer
-timer.Exists() -- Check timer valid
+timer.Create(name, time, replys, func) -- Create timer
+timer.Simple(time, func) -- Create timer without any name
+timer.Destroy(time) -- Destroy timer
+timer.TimeLeft(time) -- Get time left timer
+timer.Exists(time) -- Check timer valid
+timer.Update() -- Think func
+timer.Pause(name) -- Pauses timer
+timer.UnPause(name) -- UnPauses timer
+timer.Start(name) -- Start and ReWrite timer
+timer.Stop(name) -- Stop and ReWrite timer
+timer.Toggle(name) -- Runs either timer.Pause or timer.UnPause based on the timer's current status
+timer.RepsLeft(name) -- Returns amount of repetitions left before the timer destroys itself.
 ```
 
 Example:
@@ -32,7 +38,7 @@ Example:
 require("timer")
 
 function love.load()
-   timer.Create("Test", 15, function() a = 10 end)
+   timer.Create("Test", 15, 1, function() a = 10 end)
 end
 
 function love.draw()
@@ -40,7 +46,7 @@ function love.draw()
 end
 
 function love.update(dt)
-    UpdateTimers()
+    timer.Update()
 end
 
 ```
